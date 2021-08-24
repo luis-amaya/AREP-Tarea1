@@ -7,6 +7,7 @@ import static spark.Spark.*;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 /**
  * Minimal web app example for Heroku using SparkWeb
  *
@@ -24,7 +25,7 @@ public class App {
         staticFiles.location("/public/html");
         get("/inputdata", (req, res) -> inputDataPage(req, res));
         get("/results", (req, res) -> resultsPage(req, res));
-        get("/facadealpha", "application/json", (req,res) -> facadeAlpha(req,res));
+        get("/facadealpha", "application/json", (req, res) -> facadeAlpha(req, res));
     }
 
     private static String inputDataPage(Request req, Response res) {
@@ -56,14 +57,13 @@ public class App {
         return 4567; // returns default port if heroku-port isn't set (i.e. on localhost)
     }
 
-
-    private static String facadeAlpha(Request req, Response res){
+    private static String facadeAlpha(Request req, Response res) {
         String stock = req.queryParams("st");
-        System.out.println("Stock str: "+ stock);
+        System.out.println("Stock str: " + stock);
         String response = "None";
         HttpStockService stockService = CurrentServiceInstance.getInstance().getService();
-        if(stock != null && stock != ""){  
-            System.out.println("Setting stock to: "+ stock);
+        if (stock != null && stock != "") {
+            System.out.println("Setting stock to: " + stock);
             stockService.setStock(stock);
         }
 

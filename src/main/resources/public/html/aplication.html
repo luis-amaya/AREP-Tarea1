@@ -26,11 +26,11 @@
 										<p class="mb-2"> _ </p>
 										<p class="mb-5">Ingrese el activo</p>
 										<p class="mb-1"><i class="uil uil-location-pin-alt size-22"></i></p>
-										<input id="" name="AlphaStock" type="String" value=""
+										<label for = "domTextelement"> Stock: </label>
+										<input id="AlphaStock" name="AlphaStock" type="String" value=""
 											style="width: 80%; border-radius: 100px; padding-left: 20px;"
-											class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all userTextInput"
-											aria-required="true" role="textbox" aria-readonly="false" aria-disabled="false">
-										<a href="" class="link">Submit</a>
+											aria-required="true" role="textbox" aria-readonly="false" aria-disabled="false"">
+										<a class="link" id="AlphaStockButton">Submit</a>
 										<div class="img-wrap img-2">
 											<img src="" alt="">
 										</div>
@@ -50,11 +50,11 @@
 										<p class="mb-2"> _ </p>
 										<p class="mb-5">Ingrese el activo</p>
 										<p class="mb-1"><i class="uil uil-location-pin-alt size-22"></i></p>
-										<input id="IexapisStock" name="log:Usuario" type="String" value=""
+										<label for = "domTextelement"> Stock: </label>
+										<input id="IexapisStock" name="IexapisStock" type="String" value=""
 											style="width: 80%; border-radius: 100px; padding-left: 20px;"
-											class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all userTextInput"
 											aria-required="true" role="textbox" aria-readonly="false" aria-disabled="false">
-										<a href="" class="link">Submit</a>
+										<a class="link" id="IexapisStockButton">Submit</a>
 										<div class="img-wrap img-2">
 											<img src="http://assets.stickpng.com/thumbs/580b585b2edbce24c47b2885.png"
 												alt="">
@@ -73,11 +73,32 @@
 		</div>
 	</div>
 	<script>
-		var pepito;
-		fetch("https://" + window.location.host +"?sr=")
-		.then(response => response.json())
-		.then(data => {pepito = data});
+		
+		var apiResponse;
 
+		function toFetch(symbol) {
+			fetch("http://" + window.location.host + "/facadealpha?st="+symbol)
+				.then(response => response.json())
+				.then(data => {apiResponse = data});
+
+
+		}
+
+
+		document.getElementById("IexapisStockButton").addEventListener("click", function () {
+			const symbol = document.getElementById("IexapisStock").value;
+			console.log(symbol);
+			toFetch(symbol);
+		});
+
+		document.getElementById("AlphaStockButton").addEventListener("click", function () {
+			const symbol = document.getElementById("AlphaStock").value;
+			toFetch(symbol);
+
+			
+		}
+
+		)
 	</script>
 
 

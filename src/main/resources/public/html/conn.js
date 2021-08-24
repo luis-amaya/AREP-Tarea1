@@ -1,4 +1,3 @@
-function domain(){
-    var URLdomain = window.location.host;
-    return URLdomain;
-}
+fetch("" + domain() + "")
+    .then(response => response.json())
+    .then(data => console.log(data));

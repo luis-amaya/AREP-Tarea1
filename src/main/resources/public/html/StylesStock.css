@@ -461,6 +461,3 @@ a:hover {
     transform: translate3d(0, 0, 35px) perspective(100px) scale(1);
     transition: transform 400ms 1300ms ease, opacity 300ms 1300ms ease;
 }
-
-
-input {}

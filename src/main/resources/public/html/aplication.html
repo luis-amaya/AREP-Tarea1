@@ -10,59 +10,59 @@
 </head>
 
 
-<div class="section over-hide">
-	<div class="container">
-		<div class="row full-height justify-content-center">
-			<div class="col-12 text-center align-self-center py-5">
-				<div class="section text-center py-5 py-md-0">
-					<input class="pricing" type="checkbox" id="pricing" name="pricing" />
-					<label for="pricing"><span class="block-diff">Alpha<span
-								class="float-right">Iexapis</span></span></label>
-					<div class="card-3d-wrap mx-auto">
-						<div class="card-3d-wrapper">
-							<div class="card-front">
-								<div class="pricing-wrap">
-									<h4 class="mb-5">Alpha</h4>
-									<p class="mb-2"> _ </p>
-									<p class="mb-5">Ingrese el activo</p>
-									<p class="mb-1"><i class="uil uil-location-pin-alt size-22"></i></p>
-									<input id="" name="AlphaStock" type="String" value=""
-										style="width: 80%; border-radius: 100px; padding-left: 20px;"
-										class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all userTextInput"
-										aria-required="true" role="textbox" aria-readonly="false" aria-disabled="false">
-									<a href="" class="link">Submit</a>
-									<div class="img-wrap img-2">
-										<img src="" alt="">
-									</div>
-									<div class="img-wrap img-2">
-										<img src="http://assets.stickpng.com/thumbs/580b585b2edbce24c47b288b.png"
-											alt="">
-									</div>
-									<div class="img-wrap img-6">
-										<img src="http://assets.stickpng.com/thumbs/580b585b2edbce24c47b23f5.png"
-											alt="">
+	<div class="section over-hide">
+		<div class="container">
+			<div class="row full-height justify-content-center">
+				<div class="col-12 text-center align-self-center py-5">
+					<div class="section text-center py-5 py-md-0">
+						<input class="pricing" type="checkbox" id="pricing" name="pricing" />
+						<label for="pricing"><span class="block-diff">Alpha<span
+									class="float-right">Iexapis</span></span></label>
+						<div class="card-3d-wrap mx-auto">
+							<div class="card-3d-wrapper">
+								<div class="card-front">
+									<div class="pricing-wrap">
+										<h4 class="mb-5">Alpha</h4>
+										<p class="mb-2"> _ </p>
+										<p class="mb-5">Ingrese el activo</p>
+										<p class="mb-1"><i class="uil uil-location-pin-alt size-22"></i></p>
+										<input id="" name="AlphaStock" type="String" value=""
+											style="width: 80%; border-radius: 100px; padding-left: 20px;"
+											class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all userTextInput"
+											aria-required="true" role="textbox" aria-readonly="false" aria-disabled="false">
+										<a href="" class="link">Submit</a>
+										<div class="img-wrap img-2">
+											<img src="" alt="">
+										</div>
+										<div class="img-wrap img-2">
+											<img src="http://assets.stickpng.com/thumbs/580b585b2edbce24c47b288b.png"
+												alt="">
+										</div>
+										<div class="img-wrap img-6">
+											<img src="http://assets.stickpng.com/thumbs/580b585b2edbce24c47b23f5.png"
+												alt="">
+										</div>
 									</div>
 								</div>
-							</div>
-							<div class="card-back">
-								<div class="pricing-wrap">
-									<h4 class="mb-5">IEXAPIS</h4>
-									<p class="mb-2"> _ </p>
-									<p class="mb-5">Ingrese el activo</p>
-									<p class="mb-1"><i class="uil uil-location-pin-alt size-22"></i></p>
-									<input id="IexapisStock" name="log:Usuario" type="String" value=""
-										style="width: 80%; border-radius: 100px; padding-left: 20px;"
-										class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all userTextInput"
-										aria-required="true" role="textbox" aria-readonly="false" aria-disabled="false">
-									<a href="" class="link">Submit</a>
-									<div class="img-wrap img-2">
-										<img src="http://assets.stickpng.com/thumbs/580b585b2edbce24c47b2885.png"
-											alt="">
-									</div>
-
-									<div class="img-wrap img-7">
-										<img src="http://assets.stickpng.com/thumbs/58c582a409e8bc1b42c7794d.png"
-											alt="">
+								<div class="card-back">
+									<div class="pricing-wrap">
+										<h4 class="mb-5">IEXAPIS</h4>
+										<p class="mb-2"> _ </p>
+										<p class="mb-5">Ingrese el activo</p>
+										<p class="mb-1"><i class="uil uil-location-pin-alt size-22"></i></p>
+										<input id="IexapisStock" name="log:Usuario" type="String" value=""
+											style="width: 80%; border-radius: 100px; padding-left: 20px;"
+											class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all userTextInput"
+											aria-required="true" role="textbox" aria-readonly="false" aria-disabled="false">
+										<a href="" class="link">Submit</a>
+										<div class="img-wrap img-2">
+											<img src="http://assets.stickpng.com/thumbs/580b585b2edbce24c47b2885.png"
+												alt="">
+										</div>
+										<div class="img-wrap img-6">
+											<img src="http://assets.stickpng.com/thumbs/58c582a409e8bc1b42c7794d.png"
+												alt="">
+										</div>
 									</div>
 								</div>
 							</div>
@@ -72,8 +72,13 @@
 			</div>
 		</div>
 	</div>
-</div>
+	<script>
+		var pepito;
+		fetch("https://" + window.location.host +"?sr=")
+		.then(response => response.json())
+		.then(data => {pepito = data});
 
+	</script>
 
 
 </html>

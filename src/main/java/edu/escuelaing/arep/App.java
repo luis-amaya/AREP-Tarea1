@@ -29,6 +29,13 @@ public class App {
         get("/facadealpha", "application/json", (req, res) -> facadeAlpha(req, res));
     }
 
+    /**
+     * This method Sets an HTML page, to see how the requests work on WebPage
+     * 
+     * @param req Request
+     * @param res Response
+     * @return
+     */
     private static String inputDataPage(Request req, Response res) {
         String pageContent = "<!DOCTYPE html>" + "<html>" + "<body>" + "<h2>HTML Forms</h2>"
                 + "<form action=\"/results\">" + "  First name:<br>"
@@ -40,6 +47,13 @@ public class App {
         return pageContent;
     }
 
+    /**
+     * Sets an String with a Name and a Last Name
+     * 
+     * @param req Request
+     * @param res Response
+     * @return Returns a String with the inputs given on the inputDataPage's html
+     */
     private static String resultsPage(Request req, Response res) {
         return req.queryParams("firstname") + " " + req.queryParams("lastname");
     }
@@ -58,6 +72,13 @@ public class App {
         return 4567; // returns default port if heroku-port isn't set (i.e. on localhost)
     }
 
+    /**
+     * Sets the query params given, to redirect to the page wqith the "JSON" content
+     * 
+     * @param req Request
+     * @param res Response
+     * @return String with the response given by the TimesSerialDaily
+     */
     private static String facadeAlpha(Request req, Response res) {
         String stock = req.queryParams("st");
         System.out.println("Stock str: " + stock);

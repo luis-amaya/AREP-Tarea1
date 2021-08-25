@@ -22,7 +22,8 @@ public class App {
      */
     public static void main(String[] args) {
         port(getPort());
-        staticFiles.location("/public/html");
+        staticFiles.location("/public");
+        // staticFiles.location("/public/html");
         get("/inputdata", (req, res) -> inputDataPage(req, res));
         get("/results", (req, res) -> resultsPage(req, res));
         get("/facadealpha", "application/json", (req, res) -> facadeAlpha(req, res));

@@ -38,7 +38,7 @@ Para esto se puede utilizar cualquier shell que prefiera.
    ````
 4 ***Entorno Web***
     ````
-    localhost:4567/aplication.html
+    localhost:4567/html/aplication.html
     ````
 ## Ejecutando las pruebas ⚙️
 

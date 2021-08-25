@@ -14,10 +14,10 @@ Mira **Deployment** para conocer como desplegar el proyecto.
 
 Para un optimo funcionamiento del proyecto en un ambiente de desarrollo se debe contar con los siguientes Apps instaladas y configuradas (en el caso de Java y Maven):
 
-- [Java] (https://www.java.com/es/download/ie_manual.jsp) : Lenguaje y entorno de desarrollo
-- [Maven] (https://maven.apache.org/) : Gestor de dependencias
-- [Spark] (https://sparkjava.com/download) : Micro-framework para desarrollo web
-- [Git] (https://git-scm.com/) : Software para control de versiones
+- [Java](https://www.java.com/es/download/ie_manual.jsp) : Lenguaje y entorno de desarrollo
+- [Maven](https://maven.apache.org/) : Gestor de dependencias
+- [Spark](https://sparkjava.com/download) : Micro-framework para desarrollo web
+- [Git](https://git-scm.com/) : Software para control de versiones
 
 ### Instalación 🔧
 

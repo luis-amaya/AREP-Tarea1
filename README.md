@@ -48,7 +48,7 @@ mvn test
 ````
 ## Despliegue 📦
 
-El despliegue se puede encontrar en [Heroku](https://look-stock.herokuapp.com/aplication.html)
+El despliegue se puede encontrar en [Heroku](https://look-stock.herokuapp.com/html/aplication.html)
 
 ## Construido con 🛠️
 Proyecto construido con:

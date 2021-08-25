@@ -4,65 +4,63 @@
 
 <head>
 	<title> Look Stock</title>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">
+
 	<link rel="stylesheet" href="StylesStock.css" />
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 </head>
 
 
-	<div class="section over-hide">
-		<div class="container">
-			<div class="row full-height justify-content-center">
-				<div class="col-12 text-center align-self-center py-5">
-					<div class="section text-center py-5 py-md-0">
-						<input class="pricing" type="checkbox" id="pricing" name="pricing" />
-						<label for="pricing"><span class="block-diff">Alpha<span
-									class="float-right">Iexapis</span></span></label>
-						<div class="card-3d-wrap mx-auto">
-							<div class="card-3d-wrapper">
-								<div class="card-front">
-									<div class="pricing-wrap">
-										<h4 class="mb-5">Alpha</h4>
-										<p class="mb-2"> _ </p>
-										<p class="mb-5">Ingrese el activo</p>
-										<p class="mb-1"><i class="uil uil-location-pin-alt size-22"></i></p>
-										<label for = "domTextelement"> Stock: </label>
-										<input id="AlphaStock" name="AlphaStock" type="String" value=""
-											style="width: 80%; border-radius: 100px; padding-left: 20px;"
-											aria-required="true" role="textbox" aria-readonly="false" aria-disabled="false"">
-										<a class="link" id="AlphaStockButton">Submit</a>
-										<div class="img-wrap img-2">
-											<img src="" alt="">
-										</div>
-										<div class="img-wrap img-2">
-											<img src="http://assets.stickpng.com/thumbs/580b585b2edbce24c47b288b.png"
-												alt="">
-										</div>
-										<div class="img-wrap img-6">
-											<img src="http://assets.stickpng.com/thumbs/580b585b2edbce24c47b23f5.png"
-												alt="">
-										</div>
+<div class="section over-hide" id="containers">
+	<div class="container">
+		<div class="row full-height justify-content-center">
+			<div class="col-12 text-center align-self-center py-5">
+				<div class="section text-center py-5 py-md-0">
+					<input class="pricing" type="checkbox" id="pricing" name="pricing" />
+					<label for="pricing"><span class="block-diff">Alpha<span
+								class="float-right">Iexapis</span></span></label>
+					<div class="card-3d-wrap mx-auto">
+						<div class="card-3d-wrapper">
+							<div class="card-front">
+								<div class="pricing-wrap">
+									<h4 class="mb-5">Alpha</h4>
+									<p class="mb-2"> _ </p>
+									<p class="mb-5">Ingrese el activo</p>
+									<p class="mb-1"><i class="uil uil-location-pin-alt size-22"></i></p>
+									<label for="domTextelement"> Stock: </label>
+									<input id="AlphaStock" name="AlphaStock" type="String" value=""
+										style="width: 80%; border-radius: 100px; padding-left: 20px;"
+										aria-required="true" role="textbox" aria-readonly="false" aria-disabled="false"">
+											<a class=" link" id="AlphaStockButton">Submit</a>
+									<div class="img-wrap img-2">
+										<img src="" alt="">
+									</div>
+									<div class="img-wrap img-2">
+										<img src="\images\cofreDeOro.png" alt="">
+									</div>
+									<div class="img-wrap img-6">
+										<img src="\images\Diamante.png" alt="">
 									</div>
 								</div>
-								<div class="card-back">
-									<div class="pricing-wrap">
-										<h4 class="mb-5">IEXAPIS</h4>
-										<p class="mb-2"> _ </p>
-										<p class="mb-5">Ingrese el activo</p>
-										<p class="mb-1"><i class="uil uil-location-pin-alt size-22"></i></p>
-										<label for = "domTextelement"> Stock: </label>
-										<input id="IexapisStock" name="IexapisStock" type="String" value=""
-											style="width: 80%; border-radius: 100px; padding-left: 20px;"
-											aria-required="true" role="textbox" aria-readonly="false" aria-disabled="false">
-										<a class="link" id="IexapisStockButton">Submit</a>
-										<div class="img-wrap img-2">
-											<img src="http://assets.stickpng.com/thumbs/580b585b2edbce24c47b2885.png"
-												alt="">
-										</div>
-										<div class="img-wrap img-6">
-											<img src="http://assets.stickpng.com/thumbs/58c582a409e8bc1b42c7794d.png"
-												alt="">
-										</div>
+							</div>
+							<div class="card-back">
+								<div class="pricing-wrap">
+									<h4 class="mb-5">IEXAPIS</h4>
+									<p class="mb-2"> _ </p>
+									<p class="mb-5">Ingrese el activo</p>
+									<p class="mb-1"><i class="uil uil-location-pin-alt size-22"></i></p>
+									<label for="domTextelement"> Stock: </label>
+									<input id="IexapisStock" name="IexapisStock" type="String" value=""
+										style="width: 80%; border-radius: 100px; padding-left: 20px;"
+										aria-required="true" role="textbox" aria-readonly="false" aria-disabled="false">
+									<a class="link" id="IexapisStockButton" onclick="cargar()">Submit</a>
+									<div class="img-wrap img-2">
+										<img src="\images\Dinero.png" alt="">
+									</div>
+									<div class="img-wrap img-6">
+										<img src="\images\rubi.png" alt="">
 									</div>
 								</div>
 							</div>
@@ -72,34 +70,47 @@
 			</div>
 		</div>
 	</div>
-	<script>
-		
-		var apiResponse;
+</div>
 
-		function toFetch(symbol) {
-			fetch("http://" + window.location.host + "/facadealpha?st="+symbol)
-				.then(response => response.json())
-				.then(data => {apiResponse = data});
+<div class="container my-5 text-center">
+	<div class="mt-5">
+		<table class="table">
+			<tbody id="contenido" style="color: rgb(0, 0, 0); background-color: aliceblue; border-radius: 10px;">
+			</tbody>
+		</table>
+	</div>
+</div>
 
 
-		}
 
+<script>
+	async function toFetch(symbol) {
+		//console.log("Stock: "+symbol);
+		//console.log("http://" + window.location.host + "/facadealpha?st="+symbol);
+		const response = await fetch("http://" + window.location.host + "/facadealpha?st=" + symbol);
+		const data = await response.json();
+		console.log(data);
 
-		document.getElementById("IexapisStockButton").addEventListener("click", function () {
-			const symbol = document.getElementById("IexapisStock").value;
-			console.log(symbol);
-			toFetch(symbol);
-		});
+		cargar(data);
+	}
 
-		document.getElementById("AlphaStockButton").addEventListener("click", function () {
-			const symbol = document.getElementById("AlphaStock").value;
-			toFetch(symbol);
+	document.getElementById("IexapisStockButton").addEventListener("click", function () {
+		const symbol = document.getElementById("IexapisStock").value;
+		console.log(symbol);
+		toFetch(symbol);
+	});
 
-			
-		}
+	document.getElementById("AlphaStockButton").addEventListener("click", function () {
+		const symbol = document.getElementById("AlphaStock").value;
+		toFetch(symbol);
+	})
+	var contenido = document.querySelector("#contenido");
 
-		)
-	</script>
+	function cargar(data) {
+		contenido.innerHTML = JSON.stringify(data);
+	}
+</script>
+
 
 
 </html>
